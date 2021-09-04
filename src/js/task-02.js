@@ -17,3 +17,12 @@ function markUP (options) {
     });
 }
 ingredientsEl.append(...markUP(ingredients));
+
+
+
+
+
+const test = {
+    list: document.getElementById()
+
+}
