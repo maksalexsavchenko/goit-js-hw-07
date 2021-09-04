@@ -1,9 +1,12 @@
-const ulCalcLi = document.querySelectorAll('ul#categories li.item');
-console.log('В списке ' + ulCalcLi.length + ' категории.');
+const tags = {
+    categories: document.getElementById('categories'),
+    item: document.querySelectorAll('#categories .item'),
+};
 
-const title = document.querySelector("ul#categories li.item h2");
-console.log('Категория:' + title.textContent);
+console.log(`В списке ${tags.categories.childElementCount} категории.`);
 
-const liCategories = document.querySelector('ul#categories li.item');
-const liCalc = liCategories.querySelectorAll('li');
-console.log('Количество элементов:' + liCalc.length);
+tags.item.forEach(item => {
+    item.querySelectorAll('h2').forEach(name => console.log(`Категория: ${name.textContent}`)),
+        console.log(`Количество элементов: ${item.querySelectorAll('li').length}`)
+});
+
